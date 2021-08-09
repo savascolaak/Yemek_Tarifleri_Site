@@ -1,0 +1,91 @@
+<%@ Master Language="VB" CodeFile="Kullanici.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            background-color: #FF0000;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style3 {
+            background-color: #FFFFFF;
+        }
+        .auto-style4 {
+            background-color: #FFFFFF;
+            width: 121px;
+        }
+        .auto-style5 {
+            background-color: #FFFFFF;
+            width: 168px;
+        }
+        .auto-style6 {
+            background-color: #FFFFFF;
+            width: 134px;
+        }
+        .auto-style7 {
+            background-color: #FFFFFF;
+            width: 146px;
+        }
+        .auto-style8 {
+            width: 700px;
+            height: 20px;
+        }
+        .auto-style9 {
+            width: 200px;
+            float: left;
+            height: 100px;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div style="height: 150px; width: 700px; margin-left:300px; background-color: #ce7171;">
+       
+    </div>
+        <div style="margin-left:300px; " class="auto-style8">
+        </div>
+        <div style="margin-left:300px; width:700px; height:25px; background-color:#ce7171">
+            <table class="auto-style2">
+                <tr>
+                    <td class="auto-style4">&nbsp; <a href="Anasayfa.aspx"> ANASAYFA</a></td>
+                    <td class="auto-style5">&nbsp; <a href="GununYemegi.aspx">GÜNÜN YEMEĞİ</a></td>
+                    <td class="auto-style6">&nbsp; <a href="TarifOner.aspx">TARİF ÖNER</a></td>
+                    <td class="auto-style7">&nbsp;&nbsp; <a href="Hakkimizda.aspx">HAKKIMIZDA</a></td>
+                    <td class="auto-style3">&nbsp;&nbsp; <a href="iletisim.aspx">İLETİŞİM</a></td>
+                </tr>
+            </table>
+            <table class="auto-style1">
+            </table>
+        </div>
+        <div style="margin-left:300px; " class="auto-style8">
+        </div>
+        <div style="margin-left:300px; width:700px; height:300px;" >
+
+            <div style=" background-color:#ce7171" class="auto-style9" >
+                <asp:DataList ID="DataList1" runat="server">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+            <div style=" margin-left:50px; float:left; width:450px; height:300px; background-color:#ce7171" >
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+       
+    </form>
+</body>
+</html>
+
+
+
